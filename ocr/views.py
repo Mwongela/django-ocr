@@ -39,5 +39,5 @@ class OcrView(TemplateView):
                     api.SetImage(sharpened_image)
                     utf8_text = api.GetUTF8Text()
         except Exception as e:
-            return JsonResponse({'status': 'error', 'message': 'Server Error'}, status=500)
+            return JsonResponse({'status': 'error', 'message': 'Server Error {}'.format(e)}, status=500)
         return JsonResponse({'status': 'ok', 'data': utf8_text}, status=200)
