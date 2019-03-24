@@ -1,3 +1,4 @@
  tesseract-ocr
  libtesseract-dev
  libleptonica-dev
+ libc6
